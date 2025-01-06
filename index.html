@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananth Vankipuram - Strategic Technical Negotiator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .case-study-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .case-study-content.active {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .metrics-card {
+            transition: transform 0.2s;
+        }
+
+        .metrics-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed w-full bg-white shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">Ananth Vankipuram</h1>
+                </div>
+                <div class="space-x-6">
+                    <a href="#expertise" class="text-gray-600 hover:text-blue-600 transition">Expertise</a>
+                    <a href="#case-studies" class="text-gray-600 hover:text-blue-600 transition">Case Studies</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-24 flex items-center">
+            <div class="w-2/3">
+                <h1 class="text-4xl font-bold mb-4">Strategic Technical Negotiator</h1>
+                <p class="text-xl opacity-90">Driving organizational success through data-driven partnership management and technical excellence</p>
+                <div class="mt-8 flex space-x-4">
+                    <a href="mailto:vsap78@gmail.com" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">Contact Me</a>
+                    <a href="#case-studies" class="border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-600 transition">View Case Studies</a>
+                </div>
+            </div>
+            <div class="w-1/3 flex justify-end">
+                <div class="w-64 h-64 bg-white rounded-full overflow-hidden shadow-lg">
+                    <img src="images/ananth.jpg" alt="Ananth Vankipuram" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16">
+        <section id="expertise" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Core Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Technical Partnership</h3>
+                    <p class="text-gray-600">Expertise in managing complex technical partnerships, negotiating vendor relationships, and driving strategic technical integrations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Data-Driven Optimization</h3>
+                    <p class="text-gray-600">Specialized in developing analytical frameworks for performance optimization, cost reduction, and strategic decision-making.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">System Architecture</h3>
+                    <p class="text-gray-600">Proven track record in designing and implementing robust system architectures with a focus on efficiency and scalability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-studies" class="space-y-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Strategic Impact Case Studies</h2>
+
+            <!-- Danaher Capacity Optimization Case Study -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6 cursor-pointer hover:bg-gray-50" onclick="toggleCase('danaher')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold text-gray-800">Strategic Capacity Optimization at Danaher</h3>
+                        <svg id="danaher-icon" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="danaher-content" class="case-study-content">
+                    <div class="p-6 bg-blue-50">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-xl font-semibold mb-4">Key Deliverables</h4>
+                                <ul class="space-y-2 list-disc pl-5">
+                                    <li>Developed comprehensive supplier capability framework</li>
+                                    <li>Implemented data-driven performance metrics</li>
+                                    <li>Created predictive optimization models</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-4">Impact Metrics</h4>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <p class="text-2xl font-bold text-blue-600">40%</p>
+                                        <p class="text-sm text-gray-600">Efficiency Gain</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <p class="text-2xl font-bold text-green-600">$1M</p>
+                                        <p class="text-sm text-gray-600">Cost Savings</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <canvas id="danaherChart" class="w-full h-64"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illumina Cost Optimization Case Study -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6 cursor-pointer hover:bg-gray-50" onclick="toggleCase('illumina')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold text-gray-800">Cost Optimization Through Advanced Analytics at Illumina</h3>
+                        <svg id="illumina-icon" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="illumina-content" class="case-study-content">
+                    <div class="p-6 bg-green-50">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-xl font-semibold mb-4">Strategic Approach</h4>
+                                <ul class="space-y-2 list-disc pl-5">
+                                    <li>Advanced statistical cost driver analysis</li>
+                                    <li>Real-time pricing optimization</li>
+                                    <li>Comprehensive supplier performance tracking</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-4">Key Achievements</h4>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <p class="text-2xl font-bold text-green-600">$400K</p>
+                                        <p class="text-sm text-gray-600">Annual Savings</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg text-center">
+                                        <p class="text-2xl font-bold text-indigo-600">100%</p>
+                                        <p class="text-sm text-gray-600">Integration Success</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <canvas id="illuminaChart" class="w-full h-64"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2024 Ananth Vankipuram | Technical Partnership Engineer</p>
+            <div class="mt-4 space-x-4">
+                <a href="mailto:vsap78@gmail.com" class="hover:text-blue-400">vsap78@gmail.com</a>
+                <a href="tel:8157622161" class="hover:text-blue-400">(815) 762-2161</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleCase(id) {
+            const content = document.getElementById(`${id}-content`);
+            const icon = document.getElementById(`${id}-icon`);
+            
+            content.classList.toggle('active');
+            icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : '';
+            
+            if (content.classList.contains('active')) {
+                if (id === 'danaher') createDanaherChart();
+                if (id === 'illumina') createIlluminaChart();
+            }
+        }
+
+        function createDanaherChart() {
+            const ctx = document.getElementById('danaherChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [
+                        {
+                            label: 'Baseline Performance',
+                            data: [65, 62, 60, 63, 58, 65],
+                            borderColor: 'rgb(59, 130, 246)',
+                            backgroundColor: 'rgba(59, 130, 246, 0.2)'
+                        },
+                        {
+                            label: 'Optimized Performance',
+                            data: [65, 68, 75, 82, 88, 92],
+                            borderColor: 'rgb(16, 185, 129)',
+                            backgroundColor: 'rgba(16, 185, 129, 0.2)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Performance Optimization Trajectory'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function createIlluminaChart() {
+            const ctx = document.getElementById('illuminaChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Raw Materials', 'Processing', 'Quality Control', 'Logistics'],
+                    datasets: [
+                        {
+                            label: 'Baseline Costs',
+                            data: [280000, 150000, 90000, 180000],
+                            backgroundColor: 'rgb(59, 130, 246)'
+                        },
+                        {
+                            label: 'Optimized Costs',
+                            data: [220000, 120000, 65000, 145000],
+                            backgroundColor: 'rgb(16, 185, 129)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Cost Optimization Across Key Areas'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
