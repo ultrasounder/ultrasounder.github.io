@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I want to understand OTA from the bottom of the stack</title>
+    <style>
+      body{margin:0;background:#f8fafc;color:#1f2937;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75}
+      main{max-width:760px;margin:0 auto;padding:56px 24px 96px;background:#fff;min-height:100vh}
+      a{color:#2563eb;text-decoration:none} a:hover{text-decoration:underline}
+      .eyebrow{color:#6b7280;text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:700}
+      h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.08;margin:.4rem 0 1rem}
+      h2{margin-top:2.8rem;font-size:1.7rem;line-height:1.2}
+      .dek{font-size:1.2rem;color:#4b5563}
+      .meta{color:#6b7280;font-size:.9rem;margin-bottom:44px}
+      code{background:#f1f5f9;padding:.12rem .35rem;border-radius:5px}
+      pre{background:#111827;color:#f9fafb;padding:18px;border-radius:10px;overflow:auto}
+      blockquote{border-left:4px solid #cbd5e1;padding-left:18px;color:#4b5563;margin:28px 0}
+      .back{display:inline-block;margin-bottom:48px}
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="./">← All notes</a>
+      <div class="eyebrow">Embedded systems · 28 August 2026</div>
+      <h1>I want to understand OTA from the bottom of the stack</h1>
+      <p class="dek">I have used firmware tools for years. I want to know what they are actually doing.</p>
+      <div class="meta">A work-in-public note · Flash memory · ESP32 · OTA</div>
+
+      <p>
+        There is a particular kind of technical knowledge that looks like understanding until you try to
+        explain it without the tool that normally hides it from you.
+      </p>
+      <p>
+        “Flash the firmware.” “Install the bootloader.” “Do an OTA update.” These commands are wonderfully
+        useful—and wonderfully good at hiding the machine underneath them.
+      </p>
+      <p>
+        So I am taking a step backward. Before I build a sophisticated OTA system, I want to understand the
+        physical and software layers that make the simple command possible.
+      </p>
+
+      <h2>Start with the question: what does “programming flash” mean?</h2>
+      <p>
+        A binary file on my laptop is just a sequence of bytes. An ESP32 eventually executes instructions
+        represented by those bytes. Between those two facts is an entire stack: a host tool, a transport,
+        a flash controller, flash cells, a boot process, an address map, and software that interprets the
+        resulting memory.
+      </p>
+      <p>
+        I don't want to memorize that stack as a diagram. I want to be able to reconstruct it from first
+        principles.
+      </p>
+
+      <h2>The experiment I want to build</h2>
+      <p>
+        The first milestone is deliberately primitive: build a tiny flash programmer with my own hands.
+        Not because it will compete with <code>esptool</code>, but because a deliberately bad tool makes the
+        hidden steps visible.
+      </p>
+      <p>The progression I have in mind is:</p>
+      <ol>
+        <li>Understand what a flash cell stores physically.</li>
+        <li>Understand why flash has page-program and erase operations.</li>
+        <li>Build a toy memory device and programmer model.</li>
+        <li>Observe the difference between an address, a byte, a page, and an erase block.</li>
+        <li>Move from the toy model to real external flash.</li>
+        <li>Only then examine how a microcontroller boots from flash.</li>
+        <li>Finally, reconstruct OTA as a controlled change to what the boot process considers executable.</li>
+      </ol>
+
+      <h2>Why OTA suddenly becomes interesting</h2>
+      <p>
+        Once the physical memory model is clear, OTA stops looking like magic networking infrastructure.
+        It becomes a reliability problem around state transitions.
+      </p>
+      <p>
+        A device is running version A. Somewhere there is version B. The device must receive B, store it,
+        verify it, decide whether B is trustworthy, boot it, and retain a way to recover if something goes
+        wrong.
+      </p>
+      <blockquote>
+        The interesting question isn't “how do I download a firmware image?” It is “how does a machine safely
+        change the program it depends on while that program is currently running?”
+      </blockquote>
+
+      <h2>The rule for this series</h2>
+      <p>
+        I am going to write these notes as experiments rather than tutorials. When I discover that I have
+        been carrying a fuzzy mental model, I want the mistake to remain visible. When an abstraction saves
+        me from understanding something, I want to peel it back at least once.
+      </p>
+      <p>
+        The destination is not a collection of OTA recipes. The destination is a mental model strong enough
+        that the recipes become obvious.
+      </p>
+
+      <p><a href="./">← Back to the workbench</a></p>
+    </main>
+  </body>
+</html>
