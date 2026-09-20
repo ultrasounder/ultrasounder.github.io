@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A first note on rationality, technology, modernity, and the Western philosophical tradition—from Aristotle and Descartes to Bacon, Weber, and Heidegger." />
+    <title>When Rationality Becomes the Measure of Everything — Ananth Vankipuram</title>
+    <style>
+      :root {
+        --bg: #fafafa;
+        --paper: #ffffff;
+        --ink: #171717;
+        --muted: #737373;
+        --line: #e5e5e5;
+        --accent: #1d4ed8;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.8;
+      }
+      main {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 54px 24px 96px;
+        background: var(--paper);
+        min-height: 100vh;
+      }
+      a { color: inherit; }
+      a:hover { color: var(--accent); }
+      .back {
+        display: inline-block;
+        margin-bottom: 54px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--muted);
+      }
+      .eyebrow {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: .13em;
+        font-size: .74rem;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: clamp(2.5rem, 7vw, 4.7rem);
+        line-height: 1.04;
+        letter-spacing: -.035em;
+        margin: .4rem 0 1.2rem;
+      }
+      h2 {
+        margin-top: 3rem;
+        font-size: 1.7rem;
+        line-height: 1.2;
+      }
+      p, li { font-size: 1.08rem; }
+      .dek {
+        font-size: 1.28rem;
+        line-height: 1.55;
+        color: #4b5563;
+        margin-bottom: 1rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: .88rem;
+        margin-bottom: 3.2rem;
+      }
+      blockquote {
+        border-left: 3px solid #cbd5e1;
+        margin: 2.2rem 0;
+        padding: .2rem 0 .2rem 20px;
+        color: #4b5563;
+        font-style: italic;
+      }
+      .reading {
+        margin-top: 3.4rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--line);
+      }
+      .reading a { color: #404040; }
+      footer {
+        margin-top: 4rem;
+        padding-top: 1.4rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: .82rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="../">← Back to the workbench</a>
+
+      <div class="eyebrow">Philosophy &amp; modernity · 19 September 2026</div>
+      <h1>When Rationality Becomes the Measure of Everything</h1>
+      <p class="dek">
+        Modernity gave us extraordinary powers. It also taught us to ask whether almost every human
+        problem can be translated into a problem of optimization.
+      </p>
+      <div class="meta">
+        Western canon · Technology · Rationalization · The good life
+      </div>
+
+      <p>
+        I spend a good part of my working life making machines do things that were previously difficult.
+        I write software that programs flash memory, moves firmware, boots processors, updates devices,
+        and makes complicated systems behave predictably.
+      </p>
+
+      <p>
+        I like this work precisely because it rewards clarity. A processor either jumps to the right
+        address or it does not. A boot image either verifies or it does not. A system either recovers
+        after a failed update or it does not.
+      </p>
+
+      <p>
+        But that success creates a strange temptation: once a way of thinking works extremely well in one
+        domain, we start applying it everywhere.
+      </p>
+
+      <p>
+        We begin to treat education as an optimization problem, friendship as a network, attention as a
+        resource, health as a set of metrics, work as a productivity function, and a human life as something
+        that ought to show measurable improvement from one release to the next.
+      </p>
+
+      <blockquote>
+        The question I want to explore in these notes is not whether reason is good. It is whether
+        instrumental reason can quietly become the standard by which every other kind of value must justify itself.
+      </blockquote>
+
+      <h2>1. Aristotle starts with a question modern engineering tends to skip</h2>
+
+      <p>
+        One useful place to begin is Aristotle's <em>Nicomachean Ethics</em>. His starting question is not
+        “How can I optimize this system?” It is “What is it to live well?”
+      </p>
+
+      <p>
+        That difference sounds small until you notice what it changes. A technical discipline normally
+        begins with an end already supplied: given this objective, what means will achieve it most reliably?
+        Aristotle is interested in the prior question of what our ends should be and how they fit together.
+      </p>
+
+      <p>
+        His concept of <em>eudaimonia</em>—often translated as happiness or flourishing—is not a mood or a
+        score. It is a way of living well. And practical wisdom (<em>phronesis</em>) is not merely the ability
+        to calculate efficiently. It involves learning, through experience and character, what is worth
+        doing in a particular situation.
+      </p>
+
+      <p>
+        This is already a useful warning for a technological society. Calculation can tell me which route
+        is shortest. It cannot, by itself, tell me whether I should make the journey.
+      </p>
+
+      <h2>2. Descartes makes method extraordinarily powerful</h2>
+
+      <p>
+        Then something changes in early modern Europe. René Descartes makes method, doubt, clarity, and
+        mathematical intelligibility central to the search for knowledge. This is not simply “the beginning
+        of modern stupidity,” as a crude anti-modern story might suggest. The power of the modern project
+        comes precisely from its ability to produce reliable knowledge by disciplined methods.
+      </p>
+
+      <p>
+        That achievement matters. If I want to understand a control system, design a processor, or debug a
+        bootloader, disciplined abstraction is one of the greatest intellectual tools ever developed.
+      </p>
+
+      <p>
+        The difficulty begins when methodological success makes us forget that method answers a narrower
+        question than life does.
+      </p>
+
+      <p>
+        A proof can establish whether something follows from premises. An experiment can tell us whether
+        a prediction survives observation. An engineering calculation can tell us whether a design will
+        meet a requirement.
+      </p>
+
+      <p>
+        None of those methods, standing alone, supplies the requirement itself.
+      </p>
+
+      <h2>3. Bacon turns knowledge toward power</h2>
+
+      <p>
+        Francis Bacon pushes the modern project in another direction. Scientific knowledge is increasingly
+        connected with practical power: understanding nature so that human beings can act upon it.
+      </p>
+
+      <p>
+        This is one of the great sources of modernity's astonishing productivity. Knowledge is no longer
+        only something to contemplate; it becomes something that can produce effects in the world.
+      </p>
+
+      <p>
+        Again, there is nothing inherently wrong with that. A vaccine, a microprocessor, a reliable
+        spacecraft, or a safer medical device is not philosophically suspect merely because it is useful.
+      </p>
+
+      <p>
+        The deeper question is what happens when usefulness becomes our default definition of knowledge,
+        and when effectiveness becomes our default definition of value.
+      </p>
+
+      <h2>4. Weber gives the problem a name: rationalization</h2>
+
+      <p>
+        Max Weber makes this historical shift much harder to ignore. His account of modernity emphasizes
+        <em>rationalization</em>: increasing calculation, formalization, specialization, bureaucracy, and
+        systematic control.
+      </p>
+
+      <p>
+        This is not the same thing as “people became more rational.” Weber's point is more unsettling.
+        Modern institutions can become increasingly rational in an instrumental sense while leaving the
+        ultimate purposes of action unresolved.
+      </p>
+
+      <p>
+        A bureaucracy can become extraordinarily efficient while nobody inside it can answer why the
+        institution's goals deserve to govern a human life.
+      </p>
+
+      <p>
+        Science can explain more and more about how the world works without deciding what we ought to love,
+        sacrifice for, worship, or regard as sacred.
+      </p>
+
+      <p>
+        That gap is one of the central problems I want this blog to keep returning to.
+      </p>
+
+      <h2>5. Heidegger asks us to look underneath the machines</h2>
+
+      <p>
+        Martin Heidegger takes the question somewhere stranger. His concern with technology is not primarily
+        that people will possess too many gadgets. He asks whether modern technology has become a way of
+        <em>revealing</em> the world—a way in which things show up for us in the first place.
+      </p>
+
+      <p>
+        In a technological mode of thinking, things increasingly appear as resources waiting to be ordered,
+        measured, stored, optimized, and made available.
+      </p>
+
+      <p>
+        That description feels uncomfortably familiar.
+      </p>
+
+      <p>
+        Software gives us dashboards. Sensors turn environments into data streams. Machine learning turns
+        behavior into features. Cloud systems turn computation into capacity. Management systems turn people
+        into metrics. Even our own attention becomes something we measure and optimize.
+      </p>
+
+      <p>
+        The danger is not that these representations are false. The danger is that they are partial—and
+        that the partial view becomes the only view we trust.
+      </p>
+
+      <h2>6. The engineer's paradox</h2>
+
+      <p>
+        This leaves me with a paradox I want to investigate rather than resolve too quickly.
+      </p>
+
+      <p>
+        The engineering mindset is one of humanity's great achievements. It teaches us to make things
+        explicit, define interfaces, test assumptions, measure failure, and improve designs. It is a
+        remarkable discipline against wishful thinking.
+      </p>
+
+      <p>
+        But engineering is strongest when the engineer already understands what the system is for.
+      </p>
+
+      <p>
+        Give me an objective and I can help optimize it. Change the objective and I can optimize again.
+        But the ability to optimize many possible objectives does not tell us which objective deserves
+        our loyalty.
+      </p>
+
+      <p>
+        That is the boundary I am interested in: the boundary between <em>reasoning about means</em> and
+        <em>reasoning about ends</em>.
+      </p>
+
+      <h2>7. So this is not an anti-technology blog</h2>
+
+      <p>
+        Quite the opposite.
+      </p>
+
+      <p>
+        I want to understand technology better by refusing to treat it as self-justifying. I want to
+        understand rationality better by distinguishing reason from calculation. I want to read the
+        philosophers who came before us because they often asked questions that our technical vocabulary
+        makes strangely difficult to formulate.
+      </p>
+
+      <p>
+        And I want to bring those questions back into the workshop.
+      </p>
+
+      <p>
+        When I write about a flash programmer, I want to understand not only how the programmer works,
+        but what abstraction is hiding. When I write about OTA, I want to ask what it means for a machine
+        to safely replace the program by which it understands its own behavior. When I write about
+        increasingly capable technology, I want to ask what capability is <em>for</em>.
+      </p>
+
+      <p>
+        The Western canon gives us several different vocabularies for this investigation: Aristotle's
+        flourishing and practical wisdom; Descartes' method; Bacon's transformation of knowledge into
+        power; Nietzsche's suspicion of inherited values; Weber's rationalization and disenchantment;
+        Heidegger's critique of technological revealing; and, elsewhere, Kafka's vision of the human
+        being caught inside systems whose logic exceeds him.
+      </p>
+
+      <p>
+        I don't expect these thinkers to agree. They shouldn't. The point of reading them is not to pick
+        a philosopher and adopt a system. It is to make the questions sharper.
+      </p>
+
+      <blockquote>
+        The question for a technological age is not only “What can we build next?”
+        It is also “What kind of human being are we becoming by making building our highest measure?”
+      </blockquote>
+
+      <p>
+        That is the thread I want to follow here.
+      </p>
+
+      <div class="reading">
+        <h2>Starting reading list</h2>
+        <p>
+          <a href="https://plato.stanford.edu/entries/aristotle-ethics/">Aristotle — Ethics</a><br />
+          <a href="https://plato.stanford.edu/entries/descartes-method/">Descartes — Method</a><br />
+          <a href="https://plato.stanford.edu/entries/enlightenment/">Bacon and the Enlightenment</a><br />
+          <a href="https://plato.stanford.edu/entries/weber/">Max Weber — Rationalization and Modernity</a><br />
+          <a href="https://plato.stanford.edu/entries/heidegger/">Martin Heidegger — Technology and Being</a>
+        </p>
+      </div>
+
+      <footer>
+        <a href="../">← Back to the workbench</a>
+      </footer>
+    </main>
+  </body>
+</html>
