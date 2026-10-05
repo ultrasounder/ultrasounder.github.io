@@ -36,7 +36,7 @@
         font-size: 14px;
       }
       .name { font-weight: 700; text-decoration: none; }
-      .navlinks { display: flex; gap: 18px; color: var(--muted); }
+      .navlinks { display: flex; gap: 18px; color: var(--muted); flex-wrap: wrap; }
       .navlinks a { text-decoration: none; }
       .hero { padding-top: 56px; }
       .eyebrow {
@@ -58,7 +58,6 @@
       .manifesto { margin-top: 26px; color: var(--muted); max-width: 720px; }
       main { padding-bottom: 100px; }
       section { margin-top: 68px; }
-      h2 { font-size: 24px; line-height: 1.2; margin: 0 0 18px; }
       .rule { border-top: 1px solid var(--line); }
       .post {
         display: grid;
@@ -90,10 +89,7 @@
       }
       .topics a { color: #525252; text-decoration: none; }
       .topics a:hover { color: var(--accent); }
-      .now {
-        color: #404040;
-        max-width: 720px;
-      }
+      .now { color: #404040; max-width: 720px; }
       .now strong { color: var(--ink); }
       footer {
         border-top: 1px solid var(--line);
@@ -119,6 +115,7 @@
           <div class="navlinks">
             <a href="#notes">Notes</a>
             <a href="#themes">Themes</a>
+            <a href="engineering/">Engineering</a>
             <a href="#about">About</a>
             <a href="https://github.com/ultrasounder">GitHub</a>
           </div>
